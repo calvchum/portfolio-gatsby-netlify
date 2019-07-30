@@ -8,7 +8,7 @@ const typography = new Typography({
 	googleFonts: [
 		{
 			name: "Work Sans",
-			styles: ["400", "500"],
+			styles: ["200", "300", "400", "500"],
 		},
 	],
 })
@@ -18,7 +18,7 @@ const typography = new Typography({
 export const fontsize = {
 	hero: "2.67em",
 	h1: "2em",
-	subheader: "1.3em",
+	subheader: "2em",
 	body: "1em",
 }
 
@@ -39,6 +39,13 @@ export const HeaderText = styled.h1`
 	${HeaderBaselines}
 	font-size: ${fontsize.h1};
 	line-height: 140%;
+`
+
+export const SubheaderText = styled.h2`
+	${HeaderBaselines}
+	font-size: ${fontsize.subheader};
+	font-weight: 200;
+	line-heart: 140%;
 `
 
 export default typography

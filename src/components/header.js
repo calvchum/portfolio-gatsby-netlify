@@ -4,6 +4,7 @@ import React from "react"
 import logo from "../images/cLogoAnimation9.svg"
 import Navigation from "./navigation"
 import styled from "styled-components"
+import * as data from "../constants/pageInfo"
 
 const HeaderWrapper = styled.div`
   display: grid;
@@ -35,7 +36,7 @@ const Header = ({ siteTitle }) => (
       <LogoWrapper src={logo} alt="C logo" />
     </Link>
     <HeaderNavWrapper>
-      <Navigation />
+      <Navigation list={data.pageData} internal={true} />
     </HeaderNavWrapper>
   </HeaderWrapper>
 )
