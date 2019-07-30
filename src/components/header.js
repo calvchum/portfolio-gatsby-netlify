@@ -1,8 +1,7 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import logo from "../images/logo.svg"
-import animatedLogo from "../images/animatedLogo.svg"
+import logo from "../images/cLogoAnimation9.svg"
 import Navigation from "./navigation"
 import styled from "styled-components"
 
@@ -10,7 +9,7 @@ const HeaderWrapper = styled.div`
   display: grid;
   grid: 120px / 1fr 1fr;
   align-items: center;
-  padding: 0em 3em;
+  padding: 0.5em 3em;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
   background: white;
   z-index: 1;
