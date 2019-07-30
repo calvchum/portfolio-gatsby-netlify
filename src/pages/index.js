@@ -5,23 +5,17 @@ import Image from "../components/image"
 import SEO from "../components/seo"
 import styled from "styled-components"
 import { colors, SubheaderText } from "../utilities"
+import { HeroBanner } from "../components/herobanner"
 
 const AccentText = styled(SubheaderText)`
   color: ${colors.primary};
 `
-const TextWrapper = styled.div`
-  justify-content: inline;
-`
+const TextWrapper = styled.div``
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Calvin B Cheung" />
-    <TextWrapper>
-      <SubheaderText>I'm Calvin B. Cheung, a </SubheaderText>
-      <AccentText>react developer</AccentText>{" "}
-      <SubheaderText>and</SubheaderText> <AccentText>entrepeneur</AccentText>
-      <SubheaderText>from Melbourne</SubheaderText>
-    </TextWrapper>
+    <HeroBanner />
   </Layout>
 )
 
