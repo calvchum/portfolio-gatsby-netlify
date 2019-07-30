@@ -5,8 +5,8 @@ import { NavLinksFont } from "../utilities/Fonts.js"
 import * as data from "../constants/pageInfo"
 
 const ListItem = styled.li`
-	fontfamily: "Work Sans";
-	fontweight: "400";
+	font-family: "Work Sans";
+	font-weight: "400";
 	list-style: none;
 	margin-bottom: 0em;
 	margin-left: 0em;
