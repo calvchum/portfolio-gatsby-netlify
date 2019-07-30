@@ -26,7 +26,7 @@ const Navigation = ({ list, internal }) => (
 	<>
 		{list.map((page, i) => {
 			return (
-				<ListItem>
+				<ListItem key={i}>
 					{internal ? (
 						<Link to={page.link}>{page.title}</Link>
 					) : (

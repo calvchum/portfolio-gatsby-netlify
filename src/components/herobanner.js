@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { SubheaderText, paddingDefaults } from "../utilities"
 
 const HeroBannerWrapper = styled.div`
+	height: 70vh;
 	display: grid;
 	grid: repeat(2, auto) / 1fr;
 	justify-content: left;

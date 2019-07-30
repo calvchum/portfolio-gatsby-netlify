@@ -6,6 +6,7 @@ import SEO from "../components/seo"
 import styled from "styled-components"
 import { colors, SubheaderText } from "../utilities"
 import { HeroBanner } from "../components/herobanner"
+import { BannerLinks } from "../components/bannerlinks"
 
 const AccentText = styled(SubheaderText)`
   color: ${colors.primary};
@@ -16,6 +17,7 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Calvin B Cheung" />
     <HeroBanner />
+    <BannerLinks />
   </Layout>
 )
 

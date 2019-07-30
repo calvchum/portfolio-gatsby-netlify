@@ -49,4 +49,11 @@ export const SubheaderText = styled.h2`
 	line-heart: 140%;
 `
 
+export const BodyText = styled.p`
+	font-size: ${fontsize.body};
+	margin: 0em;
+	font-family: "Work Sans";
+	font-weight: 300;
+`
+
 export default typography
