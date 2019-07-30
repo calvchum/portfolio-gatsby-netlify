@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import React from "react"
 import logo from "../images/logo.svg"
 import animatedLogo from "../images/animatedLogo.svg"
+import Navigation from "./navigation"
 import styled from "styled-components"
 
 const HeaderWrapper = styled.div`
@@ -20,12 +21,23 @@ const LogoWrapper = styled.img`
   margin-bottom: 0em;
   display: flex;
 `
+const HeaderNavWrapper = styled.ul`
+  display: grid;
+  grid: 120px / repeat(4, auto);
+  grid-gap: 1em;
+  margin: 0em;
+  justify-content: flex-end;
+  align-items: center;
+`
 
 const Header = ({ siteTitle }) => (
   <HeaderWrapper>
     <Link to="/" style={{ display: "flex", alignItems: "center" }}>
       <LogoWrapper src={logo} alt="C logo" />
     </Link>
+    <HeaderNavWrapper>
+      <Navigation />
+    </HeaderNavWrapper>
   </HeaderWrapper>
 )
 
