@@ -1,7 +1,10 @@
+import { faCoffee } from "@fortawesome/free-solid-svg-icons"
+
 export const contactData = [
   {
     title: "GitHub",
     link: "https://github.com/calvchum",
+    icon: faCoffee,
   },
   {
     title: "LinkedIn",
