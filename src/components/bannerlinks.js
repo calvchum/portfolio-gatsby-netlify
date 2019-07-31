@@ -29,6 +29,7 @@ const ListItem = styled.li`
 
 const BannerLinksWrapper = styled.div`
 	outline: 1px orange dashed;
+	align-content: flex-start;
 	max-width: 960px;
 	margin: 0 auto;
 	padding: ${paddingDefaults.topBottom} 0em;
