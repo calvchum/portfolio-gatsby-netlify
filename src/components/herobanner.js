@@ -3,12 +3,17 @@ import styled from "styled-components"
 import { SubheaderText, paddingDefaults } from "../utilities"
 
 const HeroBannerWrapper = styled.div`
+	border: 2px dashed purple;
+	display: grid;
+	grid-template-columns: 3fr 1fr;
+`
+
+const HeroBannerContainer = styled.div`
 	height: 70vh;
 	display: grid;
 	grid: repeat(2, auto) / 1fr;
 	justify-content: left;
-	margin: 0em;
-	padding: ${paddingDefaults.topBottom} 0em;
+	padding: 4em 2em;
 	max-width: 960px;
 	margin: 0 auto;
 `
@@ -19,16 +24,18 @@ const HeroBannerText = styled.div`
 
 export const HeroBanner = () => (
 	<HeroBannerWrapper>
-		<HeroBannerText>
-			<SubheaderText>
-				I'm Calvin Cheung, a front-end developer from Melbourne
-			</SubheaderText>
-			<SubheaderText>
-				Currently lead developer at Darkgreen Designs
-			</SubheaderText>
-			<SubheaderText>
-				I believe life is about the journey of mastery
-			</SubheaderText>
-		</HeroBannerText>
+		<HeroBannerContainer>
+			<HeroBannerText>
+				<SubheaderText>
+					I'm Calvin Cheung, a front-end developer from Melbourne
+				</SubheaderText>
+				<SubheaderText>
+					Currently lead developer at Darkgreen Designs
+				</SubheaderText>
+				<SubheaderText>
+					I believe life is about the journey of mastery
+				</SubheaderText>
+			</HeroBannerText>
+		</HeroBannerContainer>
 	</HeroBannerWrapper>
 )

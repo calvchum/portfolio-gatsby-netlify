@@ -1,5 +1,3 @@
-import { faCoffee } from "@fortawesome/free-solid-svg-icons"
-
 export const contactData = [
   {
     title: "GitHub",
@@ -22,5 +20,6 @@ export const contactData = [
   {
     title: "Email",
     link: "https://gmail.com",
+    icon: "emailLogo",
   },
 ]

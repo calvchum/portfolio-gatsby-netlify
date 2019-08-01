@@ -43,7 +43,7 @@ export const HeaderText = styled.h1`
 
 export const SubheaderText = styled.h2`
 	${HeaderBaselines}
-	margin-bottom: 2em;
+	margin-bottom: 1.5em;
 	font-size: ${fontsize.subheader};
 	font-weight: 200;
 	line-heart: 140%;
