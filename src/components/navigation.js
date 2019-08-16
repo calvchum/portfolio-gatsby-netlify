@@ -18,7 +18,6 @@ const ListItem = styled.li`
 	}
 	& a:hover {
 		color: ${colors.primary};
-		text-decoration: none;
 	}
 `
 
