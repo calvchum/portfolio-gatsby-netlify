@@ -14,7 +14,7 @@ const AdditionalWorkWrapper = styled.div`
 `
 const ProjectTitle = styled(SubheaderText)`
 	text-align: left;
-	padding-left: 2em;
+	padding-left: 1.5em;
 	${media.med`
 		display: flex
 		justify-content: center;

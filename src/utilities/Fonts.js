@@ -8,7 +8,7 @@ const typography = new Typography({
 	googleFonts: [
 		{
 			name: "Work Sans",
-			styles: ["200", "300", "400", "500"],
+			styles: ["100", "200", "300", "400", "500"],
 		},
 	],
 })
