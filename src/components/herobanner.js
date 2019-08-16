@@ -9,7 +9,6 @@ const HeroBannerWrapper = styled.div`
 `
 
 const HeroBannerContainer = styled.div`
-	height: 70vh;
 	display: grid;
 	grid: repeat(2, auto) / 1fr;
 	justify-content: left;
@@ -27,10 +26,13 @@ export const HeroBanner = () => (
 		<HeroBannerContainer>
 			<HeroBannerText>
 				<HeaderText>
-					I'm Calvin Cheung, a front-end developer from Melbourne
+					I'm Calvin Cheung, a React developer from Melbourne
+					<br />
+					<br />
+					Currently front-end developer at Darkgreen Designs
+					<br />
+					<br />I believe life is about the journey of mastery
 				</HeaderText>
-				<HeaderText>Currently lead developer at Darkgreen Designs</HeaderText>
-				<HeaderText>I believe life is about the journey of mastery</HeaderText>
 			</HeroBannerText>
 		</HeroBannerContainer>
 	</HeroBannerWrapper>

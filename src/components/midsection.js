@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { BannerLinks } from "./bannerlinks"
-import { SubheaderText } from "../utilities"
+import { SubheaderText, media } from "../utilities"
 import * as data from "../constants/contactInfo"
 import githubLogo from "../images/icons/githubLogo.svg"
 import instagramLogo from "../images/icons/instagramLogo.svg"
@@ -13,6 +13,10 @@ const MidSectionWrapper = styled.div`
 	border: 1px dashed orange;
 	display: grid;
 	grid-template-columns: 1fr 2fr;
+	${media.med`
+		border: 5px dashed purple
+		grid-template-columns: 1fr;
+	`}
 `
 
 const BannerLinkContainer = styled.div`
@@ -41,7 +45,6 @@ const iconArray = [
 	{ name: "instagramLogo", icon: instagramLogo },
 	{ name: "linkedinLogo", icon: linkedinLogo },
 ]
-console.log(iconArray)
 
 data.contactData.forEach(object => {
 	iconArray.forEach(logo => {
@@ -65,6 +68,7 @@ export const Midsection = () => (
 				<SubheaderText>Featured work</SubheaderText>
 			</FeaturedProjectHeadingContainer>
 			<FeaturedProjectCardContainer>
+				{/* Instead of an image, */}
 				<img src={featuredProjectEcze} />
 			</FeaturedProjectCardContainer>
 		</FeaturedProjectContainer>
