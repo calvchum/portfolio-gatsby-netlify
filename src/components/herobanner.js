@@ -21,6 +21,7 @@ const HeroBannerContainer = styled.div`
 
 	${media.med`
 		grid-column: 1 / -1;
+		padding: 2em 2em 6em 2em;
 	`}
 `
 const HeroBannerText = styled.div`

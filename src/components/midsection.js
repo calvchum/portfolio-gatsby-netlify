@@ -10,6 +10,8 @@ import featuredProjectEcze from "../images/ECZE projectCard.png"
 import Img from "gatsby-image"
 
 const MidSectionWrapper = styled.div`
+	padding: 4em 0em 0em 0em;
+	background: ${colors.grey};
 	display: grid;
 	width: 100%;
 	grid-template-columns: 1fr 2fr;
