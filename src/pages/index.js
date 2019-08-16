@@ -18,21 +18,17 @@ const TextWrapper = styled.div``
 const MainWrapper = styled.div`
 	max-width: 960px;
 	margin: 4rem auto;
-	border: 2px dashed red;
 `
 
 const MidSectionContainer = styled.div`
-	border: 1px dashed orange;
 	display: grid;
 	grid-template-columns: 1fr 2fr;
 `
 
 const BannerLinkWrapper = styled.div`
-	border: 1px dashed blue;
 	min-height: 50vh;
 `
 const BannerLinkContainer = styled.div`
-	border: 1px dashed teal;
 	display: grid;
 	grid-template-columns: repeat(3, auto);
 	justify-content: space-evenly;

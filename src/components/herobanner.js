@@ -3,7 +3,6 @@ import styled from "styled-components"
 import { SubheaderText, HeaderText, paddingDefaults } from "../utilities"
 
 const HeroBannerWrapper = styled.div`
-	border: 2px dashed purple;
 	display: grid;
 	grid-template-columns: 3fr 1fr;
 `

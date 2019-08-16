@@ -24,7 +24,6 @@ const IndividualIconWrapper = styled.a`
 	max-height: 5em;
 	list-style: none;
 	align-content: center;
-	outline: 1px red dashed;
 	color: ${colors.almostBlack};
 	text-decoration: none;
 	transition: 0.2s;

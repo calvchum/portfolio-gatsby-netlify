@@ -10,17 +10,15 @@ import featuredProjectEcze from "../images/ECZE projectCard.png"
 import Img from "gatsby-image"
 
 const MidSectionWrapper = styled.div`
-	border: 1px dashed orange;
 	display: grid;
 	grid-template-columns: 1fr 2fr;
 	${media.med`
-		border: 5px dashed purple
+		
 		grid-template-columns: 1fr;
 	`}
 `
 
 const BannerLinkContainer = styled.div`
-	border: 1px dashed teal;
 	display: grid;
 	grid-template-columns: repeat(3, auto);
 	justify-content: space-evenly;
