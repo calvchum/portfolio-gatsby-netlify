@@ -30,7 +30,7 @@ const HeaderNavWrapper = styled.ul`
   justify-content: flex-end;
   align-items: center;
   ${media.small`
-    font-size: 0.9em
+    font-size: 0.8em
   `}
 `
 
