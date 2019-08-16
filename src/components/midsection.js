@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { BannerLinks } from "./bannerlinks"
-import { SubheaderText, media } from "../utilities"
+import { SubheaderText, media, colors } from "../utilities"
 import * as data from "../constants/contactInfo"
 import githubLogo from "../images/icons/githubLogo.svg"
 import instagramLogo from "../images/icons/instagramLogo.svg"
@@ -11,6 +11,7 @@ import Img from "gatsby-image"
 
 const MidSectionWrapper = styled.div`
 	display: grid;
+	width: 100%;
 	grid-template-columns: 1fr 2fr;
 	${media.med`
 		
@@ -22,6 +23,9 @@ const BannerLinkContainer = styled.div`
 	display: grid;
 	grid-template-columns: repeat(3, auto);
 	justify-content: space-evenly;
+	${media.med`
+		padding-bottom: 3em;
+	`}
 `
 
 const FeaturedProjectContainer = styled.div`

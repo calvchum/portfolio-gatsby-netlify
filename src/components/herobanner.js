@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { SubheaderText, HeaderText, paddingDefaults } from "../utilities"
+import { SubheaderText, HeaderText, paddingDefaults, media } from "../utilities"
 
 const HeroBannerWrapper = styled.div`
 	display: grid;
@@ -12,12 +12,18 @@ const HeroBannerContainer = styled.div`
 	grid: repeat(2, auto) / 1fr;
 	justify-content: left;
 	padding: 4em 2em;
-	max-width: 960px;
-	margin: 0 auto;
+	${media.med`
+		grid-column: 1 / -1;
+	`}
 `
 const HeroBannerText = styled.div`
-	max-width: 800px;
 	margin: 0 auto;
+	${media.med`
+		font-size: 0.9em;
+	`}
+	${media.small`
+		font-size: 0.75em;
+	`}
 `
 
 export const HeroBanner = () => (

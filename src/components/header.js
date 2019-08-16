@@ -11,7 +11,7 @@ const HeaderWrapper = styled.div`
   grid: 120px / 1fr 1fr;
   align-items: center;
   padding: 0.5em 3em;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+
   background: white;
   z-index: 1;
 `

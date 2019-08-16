@@ -12,7 +12,7 @@ const AdditionalWorkWrapper = styled.div`
 		grid-template-columns: 1fr;
 	`}
 `
-const AdditionalWorkHeaderContainer = styled.div`
+const ProjectTitle = styled(SubheaderText)`
 	text-align: left;
 	padding-left: 2em;
 	${media.med`
@@ -24,9 +24,7 @@ console.log(data.projects)
 
 export const AdditionalWork = () => (
 	<AdditionalWorkWrapper>
-		<AdditionalWorkHeaderContainer>
-			<SubheaderText>Additional Work</SubheaderText>
-		</AdditionalWorkHeaderContainer>
+		<ProjectTitle>Additional Work</ProjectTitle>
 		{data.projects.map((project, i) => {
 			return <ProjectCard project={project} key={i} />
 		})}

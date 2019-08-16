@@ -15,10 +15,7 @@ const AccentText = styled(SubheaderText)`
 `
 const TextWrapper = styled.div``
 
-const MainWrapper = styled.div`
-	max-width: 960px;
-	margin: 4rem auto;
-`
+const MainWrapper = styled.div``
 
 const MidSectionContainer = styled.div`
 	display: grid;
