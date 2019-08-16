@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { SubheaderText, paddingDefaults } from "../utilities"
+import { SubheaderText, HeaderText, paddingDefaults } from "../utilities"
 
 const HeroBannerWrapper = styled.div`
 	border: 2px dashed purple;
@@ -26,15 +26,11 @@ export const HeroBanner = () => (
 	<HeroBannerWrapper>
 		<HeroBannerContainer>
 			<HeroBannerText>
-				<SubheaderText>
+				<HeaderText>
 					I'm Calvin Cheung, a front-end developer from Melbourne
-				</SubheaderText>
-				<SubheaderText>
-					Currently lead developer at Darkgreen Designs
-				</SubheaderText>
-				<SubheaderText>
-					I believe life is about the journey of mastery
-				</SubheaderText>
+				</HeaderText>
+				<HeaderText>Currently lead developer at Darkgreen Designs</HeaderText>
+				<HeaderText>I believe life is about the journey of mastery</HeaderText>
 			</HeroBannerText>
 		</HeroBannerContainer>
 	</HeroBannerWrapper>

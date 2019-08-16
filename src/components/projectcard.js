@@ -10,9 +10,15 @@ const ProjectCardContainer = styled.div`
 	grid-template-columns: 2fr 1fr 1fr;
 `
 const ProjectHeading = styled(SubheaderText)`
-	padding-left: 0.5em;
+	font-size: 1.5em;
+	padding-left: 1.33em;
 	padding-bottom: 0em;
 	margin-bottom: 0;
+`
+
+const TagContainer = styled.ul`
+	padding-left: 1.33em;
+	display: inline-block;
 `
 
 export const ProjectCard = ({ project }) => (
@@ -20,7 +26,7 @@ export const ProjectCard = ({ project }) => (
 		<ProjectHeading>{project.title}</ProjectHeading>
 		<p style={{ padding: "1.5em" }}>{project.organisation}</p>
 		<p style={{ padding: "1.5em" }}>{project.date}</p>
-		<ul>
+		<TagContainer>
 			{project.tags.map((tag, i) => {
 				return (
 					<li style={{ paddingRight: "1em", display: "inline-block" }}>
@@ -29,6 +35,6 @@ export const ProjectCard = ({ project }) => (
 					</li>
 				)
 			})}
-		</ul>
+		</TagContainer>
 	</ProjectCardContainer>
 )

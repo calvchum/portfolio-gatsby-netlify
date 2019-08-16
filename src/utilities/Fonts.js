@@ -2,7 +2,7 @@ import Typography from "typography"
 import styled from "styled-components"
 
 const typography = new Typography({
-	baseFonySize: "16px",
+	baseFontSize: "16px",
 	bodyFontFamily: ["Work Sans", "sans-serif"],
 	headerFontFamily: ["Work Sans", "sans-serif"],
 	googleFonts: [
@@ -25,7 +25,7 @@ export const fontsize = {
 export const HeaderBaselines = {
 	margin: "0.4em 0em",
 	fontFamily: "Work Sans",
-	fontWeight: "500",
+	fontWeight: "300",
 }
 
 export const NavLinksFont = {
@@ -43,9 +43,9 @@ export const HeaderText = styled.h1`
 
 export const SubheaderText = styled.h2`
 	${HeaderBaselines}
-	margin-bottom: 1.5em;
+	margin-bottom: 1em;
 	font-size: ${fontsize.subheader};
-	font-weight: 200;
+	font-weight: 400;
 	line-heart: 140%;
 `
 
