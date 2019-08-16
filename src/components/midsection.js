@@ -40,7 +40,10 @@ const FeaturedProjectHeading = styled(SubheaderText)`
 	margin-bottom: 1.5em;
 `
 
-const FeaturedProjectCardContainer = styled.div``
+const FeaturedProjectCardContainer = styled.div`
+	display: flex;
+	justify-content: center;
+`
 
 const iconArray = [
 	{ name: "githubLogo", icon: githubLogo },
@@ -71,7 +74,7 @@ export const Midsection = () => (
 			</FeaturedProjectHeadingContainer>
 			<FeaturedProjectCardContainer>
 				{/* Instead of an image, */}
-				<img src={featuredProjectEcze} />
+				<img src={featuredProjectEcze} style={{ maxHeight: "600px" }} />
 			</FeaturedProjectCardContainer>
 		</FeaturedProjectContainer>
 	</MidSectionWrapper>
