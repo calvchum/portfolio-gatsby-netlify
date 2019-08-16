@@ -15,7 +15,7 @@ const HeroBannerWrapper = styled.div`
 
 const HeroBannerContainer = styled.div`
 	display: grid;
-	padding: 2em 2em 4em 2em;
+	padding: 3em 2em 4em 3em;
 	grid: repeat(2, auto) / 1fr;
 	justify-content: left;
 

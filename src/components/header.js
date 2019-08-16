@@ -11,7 +11,7 @@ const HeaderWrapper = styled.div`
   display: grid;
   grid: 120px / 1fr 1fr;
   align-items: center;
-  padding: 0.5em 2em;
+  padding: 0.5em 3em;
 
   background: white;
   z-index: 1;
