@@ -4,13 +4,14 @@ import React from "react"
 import logo from "../images/cLogoAnimation9.svg"
 import Navigation from "./navigation"
 import styled from "styled-components"
+import { SubheaderText, media, colors } from "../utilities"
 import * as data from "../constants/pageInfo"
 
 const HeaderWrapper = styled.div`
   display: grid;
   grid: 120px / 1fr 1fr;
   align-items: center;
-  padding: 0.5em 3em;
+  padding: 0.5em 0.5em;
 
   background: white;
   z-index: 1;
@@ -28,6 +29,9 @@ const HeaderNavWrapper = styled.ul`
   margin: 0em;
   justify-content: flex-end;
   align-items: center;
+  ${media.small`
+    font-size: 0.9em
+  `}
 `
 
 const Header = ({ siteTitle }) => (
