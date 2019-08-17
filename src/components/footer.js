@@ -12,7 +12,7 @@ const FooterWrapper = styled.section`
 	background: white;
 	justify-content: left;
 	${media.med`
-		padding: 2em 0 0 0;
+		padding: 2em 0 4em 0;
 	`}
 `
 const AccentText = styled(SubheaderText)`
@@ -50,7 +50,7 @@ const Footer = () => (
 	<FooterWrapper>
 		<CTA>
 			<CTASubheader>Want to work together?</CTASubheader>
-			<Fade bottom>
+			<Fade left>
 				<AccentText>Let's talk.</AccentText>
 			</Fade>
 		</CTA>

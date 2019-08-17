@@ -66,15 +66,13 @@ data.contactData.forEach(object => {
 export const Midsection = () => (
 	<MidSectionWrapper>
 		<FeaturedProjectContainer>
-			<Fade>
-				<FeaturedProjectHeadingContainer>
-					<SubheaderText>Featured work</SubheaderText>
-				</FeaturedProjectHeadingContainer>
-				<FeaturedProjectCardContainer>
-					{/* Instead of an image, */}
-					<img src={featuredProjectEcze} style={{ maxHeight: "600px" }} />
-				</FeaturedProjectCardContainer>
-			</Fade>
+			<FeaturedProjectHeadingContainer>
+				<SubheaderText>Featured work</SubheaderText>
+			</FeaturedProjectHeadingContainer>
+			<FeaturedProjectCardContainer>
+				{/* Instead of an image, */}
+				<img src={featuredProjectEcze} style={{ maxHeight: "600px" }} />
+			</FeaturedProjectCardContainer>
 		</FeaturedProjectContainer>
 	</MidSectionWrapper>
 )
