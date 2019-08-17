@@ -7,6 +7,8 @@ import {
 	media,
 	colors,
 } from "../utilities"
+import { BannerLinks } from "./bannerlinks"
+import * as data from "../constants/contactInfo"
 
 const HeroBannerWrapper = styled.div`
 	display: grid;
@@ -50,6 +52,17 @@ const BannerLink = styled.a`
 	}
 `
 
+const BannerLinkContainer = styled.div`
+	padding-top: 4em;
+	display: grid;
+	grid-template-columns: repeat(3, auto);
+	justify-content: left;
+	${media.med`
+		padding-bottom: 3em;
+		justify-content: space-around;
+	`}
+`
+
 export const HeroBanner = () => (
 	<HeroBannerWrapper>
 		<HeroBannerContainer>
@@ -66,6 +79,13 @@ export const HeroBanner = () => (
 					<br />I believe life is about the journey of mastery
 				</HeaderText>
 			</HeroBannerText>
+			<BannerLinkContainer>
+				{data.contactData
+					.filter(item => item.title !== "Email")
+					.map((e, i) => {
+						return <BannerLinks data={e} key={i} />
+					})}
+			</BannerLinkContainer>
 		</HeroBannerContainer>
 	</HeroBannerWrapper>
 )

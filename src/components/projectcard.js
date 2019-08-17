@@ -12,6 +12,7 @@ const ProjectCardContainer = styled.div`
 	${media.small`
 		grid-template-columns: 1fr
 		justify-content: center;
+		padding: 1em;
 
 	`}
 `
@@ -20,6 +21,7 @@ const HeadingContainer = styled.div`
 	${media.small`
 		grid-column: 1 / -1;
 		text-align: left;
+		padding: 0em;
 	`}
 `
 const ProjectHeading = styled(SubheaderText)`
@@ -27,10 +29,15 @@ const ProjectHeading = styled(SubheaderText)`
 	padding-bottom: 0em;
 	margin-bottom: 0;
 	color: ${colors.primary};
+	${media.small`
+		padding: 0;
+	`}
 `
 const Info = styled.p`
+	margin: 0;
+	align-self: center;
 	font-weight: 100;
-	margin: 9.6px 0 0 0;
+	align-content: center;
 	${media.small`
 		grid-column: 1 / -1;
 		text-align: left;

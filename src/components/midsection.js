@@ -1,12 +1,11 @@
 import React from "react"
 import styled from "styled-components"
-import { BannerLinks } from "./bannerlinks"
 import { SubheaderText, media, colors } from "../utilities"
 import * as data from "../constants/contactInfo"
 import githubLogo from "../images/icons/githubLogo.svg"
 import instagramLogo from "../images/icons/instagramLogo.svg"
 import linkedinLogo from "../images/icons/linkedinLogo.svg"
-import featuredProjectEcze from "../images/ECZE projectCard.png"
+import featuredProjectEcze from "../images/ECZEprojectCard3.png"
 import Img from "gatsby-image"
 
 const MidSectionWrapper = styled.div`
@@ -32,6 +31,7 @@ const BannerLinkContainer = styled.div`
 
 const FeaturedProjectContainer = styled.div`
 	display: grid;
+	grid-column: 2 / 3;
 	grid-template-rows: repeat(3, auto);
 `
 
@@ -45,6 +45,7 @@ const FeaturedProjectHeading = styled(SubheaderText)`
 const FeaturedProjectCardContainer = styled.div`
 	display: flex;
 	justify-content: center;
+	margin-bottom: 5em;
 `
 
 const iconArray = [
@@ -63,13 +64,6 @@ data.contactData.forEach(object => {
 
 export const Midsection = () => (
 	<MidSectionWrapper>
-		<BannerLinkContainer>
-			{data.contactData
-				.filter(item => item.title !== "Email")
-				.map((e, i) => {
-					return <BannerLinks data={e} key={i} />
-				})}
-		</BannerLinkContainer>
 		<FeaturedProjectContainer>
 			<FeaturedProjectHeadingContainer>
 				<SubheaderText>Featured work</SubheaderText>

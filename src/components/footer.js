@@ -1,37 +1,56 @@
 import React from "react"
 import styled from "styled-components"
-import { colors } from "../utilities/Colors"
-import { SubheaderText } from "../utilities/Fonts"
+import { colors, media, SubheaderText } from "../utilities"
 import Navigation from "./navigation"
 import * as data from "../constants/contactInfo"
 
 const FooterWrapper = styled.section`
 	display: grid;
 	grid: repeat(2, auto) / 3fr 2fr;
-	padding: 3em;
+	padding: 5em 3em 3em 3em;
 	background: white;
 	justify-content: left;
+	${media.med`
+		padding: 2em 0 0 0;
+	`}
 `
 const AccentText = styled(SubheaderText)`
 	color: ${colors.primary};
 	font-weight: 300;
+	margin: 0;
 `
 
 const FooterNavWrapper = styled.ul`
 	display: grid;
+	padding: 2em 0 0 0;
 	grid: 120px / repeat(4, auto);
 	grid-gap: 3em;
-	margin: 0em;
-	justify-content: flex-end;
-	align-items: center;
+	margin: 0;
+	justify-content: left;
+	${media.med`
+		grid-column: 1 / -1;
+		padding: 1em
+		display: flex;
+		justify-content: space-between;
+	`}
+`
+const CTASubheader = styled(SubheaderText)`
+	margin: 0.4em 0 0 0;
+`
+
+const CTA = styled.div`
+	grid-column: 1 / -1;
+	${media.med`
+		padding: 1em
+	`}
 `
 
 const Footer = () => (
 	<FooterWrapper>
-		<div>
-			<SubheaderText>Want to work together?</SubheaderText>
-			<AccentText>Let's talk</AccentText>
-		</div>
+		<CTA>
+			<CTASubheader>Want to work together?</CTASubheader>
+			<AccentText>Let's talk.</AccentText>
+		</CTA>
 		<FooterNavWrapper>
 			<Navigation list={data.contactData} internal={false} />
 		</FooterNavWrapper>

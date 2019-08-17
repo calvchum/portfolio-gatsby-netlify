@@ -13,11 +13,15 @@ const AdditionalWorkWrapper = styled.div`
 	`}
 `
 const ProjectTitle = styled(SubheaderText)`
+	margin: 0;
 	text-align: left;
-	padding-left: 1.5em;
+	padding: 2em 0 1em 1.5em;
 	${media.med`
 		display: flex
 		justify-content: center;
+	`}
+	${media.med`
+		padding: 2em 0 1em 0;
 	`}
 `
 console.log(data.projects)
