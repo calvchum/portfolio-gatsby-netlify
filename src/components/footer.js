@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { colors, media, SubheaderText } from "../utilities"
 import Navigation from "./navigation"
 import * as data from "../constants/contactInfo"
+import Fade from "react-reveal/Fade"
 
 const FooterWrapper = styled.section`
 	display: grid;
@@ -49,7 +50,9 @@ const Footer = () => (
 	<FooterWrapper>
 		<CTA>
 			<CTASubheader>Want to work together?</CTASubheader>
-			<AccentText>Let's talk.</AccentText>
+			<Fade bottom>
+				<AccentText>Let's talk.</AccentText>
+			</Fade>
 		</CTA>
 		<FooterNavWrapper>
 			<Navigation list={data.contactData} internal={false} />
