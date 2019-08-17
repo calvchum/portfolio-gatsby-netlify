@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `react developer`,
-    description: `a place to store creations`,
+    description: `portfolio and blog`,
     author: `@calvchum`,
   },
   plugins: [
@@ -22,8 +22,8 @@ module.exports = {
         name: `gatsby-starter-default`,
         short_name: `starter`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#FF9A62`,
+        theme_color: `#FF9A62`,
         display: `minimal-ui`,
         icon: `src/images/logo.svg`, // This path is relative to the root of the site.
       },
