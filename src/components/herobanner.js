@@ -9,6 +9,7 @@ import {
 } from "../utilities"
 import { BannerLinks } from "./bannerlinks"
 import * as data from "../constants/contactInfo"
+import Fade from "react-reveal/Fade"
 
 const HeroBannerWrapper = styled.div`
 	display: grid;
@@ -66,26 +67,28 @@ const BannerLinkContainer = styled.div`
 export const HeroBanner = () => (
 	<HeroBannerWrapper>
 		<HeroBannerContainer>
-			<HeroBannerText>
-				<HeaderText>
-					I'm Calvin Cheung, a{" "}
-					<a href="https://github.com/calvchum">React developer</a> from
-					Melbourne
-					<br />
-					<br />
-					Currently front-end developer at{" "}
-					<a href="http://darkgreen.design">Darkgreen Designs</a>
-					<br />
-					<br />I believe life is about the journey of mastery
-				</HeaderText>
-			</HeroBannerText>
-			<BannerLinkContainer>
-				{data.contactData
-					.filter(item => item.title !== "Email")
-					.map((e, i) => {
-						return <BannerLinks data={e} key={i} />
-					})}
-			</BannerLinkContainer>
+			<Fade>
+				<HeroBannerText>
+					<HeaderText>
+						I'm Calvin Cheung, a{" "}
+						<a href="https://github.com/calvchum">React developer</a> from
+						Melbourne
+						<br />
+						<br />
+						Currently front-end developer at{" "}
+						<a href="http://darkgreen.design">Darkgreen Designs</a>
+						<br />
+						<br />I believe life is about the journey of mastery
+					</HeaderText>
+				</HeroBannerText>
+				<BannerLinkContainer>
+					{data.contactData
+						.filter(item => item.title !== "Email")
+						.map((e, i) => {
+							return <BannerLinks data={e} key={i} />
+						})}
+				</BannerLinkContainer>
+			</Fade>
 		</HeroBannerContainer>
 	</HeroBannerWrapper>
 )
