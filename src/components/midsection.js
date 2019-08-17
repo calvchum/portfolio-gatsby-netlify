@@ -7,6 +7,7 @@ import instagramLogo from "../images/icons/instagramLogo.svg"
 import linkedinLogo from "../images/icons/linkedinLogo.svg"
 import featuredProjectEcze from "../images/ECZEprojectCard3.png"
 import Img from "gatsby-image"
+import Fade from "react-reveal/Fade"
 
 const MidSectionWrapper = styled.div`
 	padding: 4em 0em 0em 0em;
@@ -65,13 +66,15 @@ data.contactData.forEach(object => {
 export const Midsection = () => (
 	<MidSectionWrapper>
 		<FeaturedProjectContainer>
-			<FeaturedProjectHeadingContainer>
-				<SubheaderText>Featured work</SubheaderText>
-			</FeaturedProjectHeadingContainer>
-			<FeaturedProjectCardContainer>
-				{/* Instead of an image, */}
-				<img src={featuredProjectEcze} style={{ maxHeight: "600px" }} />
-			</FeaturedProjectCardContainer>
+			<Fade>
+				<FeaturedProjectHeadingContainer>
+					<SubheaderText>Featured work</SubheaderText>
+				</FeaturedProjectHeadingContainer>
+				<FeaturedProjectCardContainer>
+					{/* Instead of an image, */}
+					<img src={featuredProjectEcze} style={{ maxHeight: "600px" }} />
+				</FeaturedProjectCardContainer>
+			</Fade>
 		</FeaturedProjectContainer>
 	</MidSectionWrapper>
 )
