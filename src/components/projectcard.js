@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { SubheaderText, media, colors } from "../utilities"
 import Img from "gatsby-image"
+import Fade from "react-reveal/Fade"
 
 const ProjectCardContainer = styled.div`
 	min-height: 3em;
@@ -56,16 +57,18 @@ const Tag = styled.li`
 `
 
 export const ProjectCard = ({ project }) => (
-	<ProjectCardContainer>
-		<HeadingContainer>
-			<ProjectHeading>{project.title}</ProjectHeading>
-			<TagContainer>
-				{project.tags.map((tag, i) => {
-					return <Tag> {`${tag}`} </Tag>
-				})}
-			</TagContainer>
-		</HeadingContainer>
-		<Info>{project.organisation}</Info>
-		<Info>{project.date}</Info>
-	</ProjectCardContainer>
+	<Fade bottom>
+		<ProjectCardContainer>
+			<HeadingContainer>
+				<ProjectHeading>{project.title}</ProjectHeading>
+				<TagContainer>
+					{project.tags.map((tag, i) => {
+						return <Tag> {`${tag}`} </Tag>
+					})}
+				</TagContainer>
+			</HeadingContainer>
+			<Info>{project.organisation}</Info>
+			<Info>{project.date}</Info>
+		</ProjectCardContainer>
+	</Fade>
 )
