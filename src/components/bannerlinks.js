@@ -12,9 +12,11 @@ const Icon = styled.img`
 	margin-bottom: 0;
 	width: 100%
 	justify-self: center;
+	align-self: center;
 `
 const CenteredBodyText = styled(BodyText)`
 	text-align: center;
+	align-self: center;
 `
 
 const IndividualIconWrapper = styled.a`

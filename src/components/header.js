@@ -37,7 +37,7 @@ const HeaderNavWrapper = styled.ul`
 const Header = ({ siteTitle }) => (
   <HeaderWrapper>
     <Link to="/" style={{ display: "flex", alignItems: "center" }}>
-      <LogoWrapper src={logo} alt="C logo" />
+      <LogoWrapper src={`${logo}?nocache=${Date.now()}`} alt="C logo" />
     </Link>
     <HeaderNavWrapper>
       <Navigation list={data.pageData} internal={true} />

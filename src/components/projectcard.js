@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { Link } from "gatsby"
 import { SubheaderText, media, colors } from "../utilities"
 import Img from "gatsby-image"
 import Fade from "react-reveal/Fade"
@@ -10,11 +11,13 @@ const ProjectCardContainer = styled.div`
 	box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25);
 	display: grid;
 	grid-template-columns: 2fr 1fr 1fr;
+	&:hover {
+		color: ${colors.white};
+	}
 	${media.small`
 		grid-template-columns: 1fr
 		justify-content: center;
 		padding: 1em;
-
 	`}
 `
 
@@ -25,15 +28,7 @@ const HeadingContainer = styled.div`
 		padding: 0em;
 	`}
 `
-const ProjectHeading = styled(SubheaderText)`
-	font-size: 1.5em;
-	padding-bottom: 0em;
-	margin-bottom: 0;
-	color: ${colors.primary};
-	${media.small`
-		padding: 0;
-	`}
-`
+const ProjectHeading = styled(SubheaderText)``
 const Info = styled.p`
 	margin: 0;
 	align-self: center;
@@ -55,6 +50,8 @@ const Tag = styled.li`
 	display: inline-block;
 	margin: 0;
 `
+
+const ProjectLink = styled(Link)``
 
 export const ProjectCard = ({ project }) => (
 	<Fade bottom>

@@ -1,19 +1,19 @@
 export const contactData = [
   {
     title: "GitHub",
-    alt: "my code",
+    alt: "code",
     link: "https://github.com/calvchum",
     icon: "githubLogo",
   },
   {
     title: "LinkedIn",
-    alt: "my work",
+    alt: "work",
     link: "https://www.linkedin.com/in/calvin-cheung-204315b8/",
     icon: "linkedinLogo",
   },
   {
     title: "Instagram",
-    alt: "my life",
+    alt: "life",
     link: "https://instagram.com/calvchum",
     icon: "instagramLogo",
   },

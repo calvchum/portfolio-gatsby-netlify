@@ -1,8 +1,7 @@
 import { Link } from "gatsby"
 import React from "react"
 import styled from "styled-components"
-import { NavLinksFont } from "../utilities/Fonts.js"
-import { colors } from "../utilities/Colors.js"
+import { colors, media, NavLinksFont } from "../utilities"
 import * as data from "../constants/pageInfo"
 
 const ListItem = styled.li`
@@ -19,6 +18,12 @@ const ListItem = styled.li`
 	& a:hover {
 		color: ${colors.primary};
 	}
+`
+
+const ListWrapper = styled.div`
+	${media.small`
+		grid-column: 1 / -1
+	`}
 `
 
 const Navigation = ({ list, internal }) => (
