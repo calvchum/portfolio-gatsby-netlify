@@ -1,6 +1,6 @@
 const path = require("path")
 
-exports.createPages = ({ actions: { createPage } }) => {
+exports.createPages = ({ actions: { createPages } }) => {
 	createPages({
 		path: "/hello",
 		component: path.resolve("./src/components/projectLayout.js"),
