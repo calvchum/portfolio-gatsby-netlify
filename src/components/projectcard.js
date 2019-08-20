@@ -59,9 +59,11 @@ export const ProjectCard = ({ project }) => (
 			<HeadingContainer>
 				<ProjectHeading>{project.title}</ProjectHeading>
 				<TagContainer>
-					{project.tags.map((tag, i) => {
-						return <Tag> {`${tag}`} </Tag>
-					})}
+					{project.tags
+						? project.tags.map((tag, i) => {
+								return <Tag key={i}> {`${tag}`} </Tag>
+						  })
+						: null}
 				</TagContainer>
 			</HeadingContainer>
 			<Info>{project.organisation}</Info>

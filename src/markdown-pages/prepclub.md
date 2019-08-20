@@ -3,6 +3,7 @@ path: "/projects/prepclub"
 date: "2018"
 title: "Prep Club"
 tags: ["design", "ruby", "figma"]
+organisation: "Le Wagon"
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et rhoncus metus, nec sollicitudin diam. Curabitur vel diam eu nisl convallis rutrum. Nunc feugiat dictum ligula. Cras ut venenatis turpis. Maecenas a ornare dui, eget sagittis purus. Mauris vestibulum massa id turpis rhoncus, quis ultricies orci vulputate. Duis vel malesuada justo, eget tincidunt mauris.

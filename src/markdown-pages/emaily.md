@@ -1,8 +1,9 @@
 ---
 path: "/projects/emaily"
-date: "2019-20-08"
-title: "This is my story"
+date: "2019"
+title: "Emaily"
 tags: ["node", "react", "mongoDB", "express"]
+organisation: "Personal"
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et rhoncus metus, nec sollicitudin diam. Curabitur vel diam eu nisl convallis rutrum. Nunc feugiat dictum ligula. Cras ut venenatis turpis. Maecenas a ornare dui, eget sagittis purus. Mauris vestibulum massa id turpis rhoncus, quis ultricies orci vulputate. Duis vel malesuada justo, eget tincidunt mauris.

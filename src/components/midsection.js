@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { SubheaderText, media, colors } from "../utilities"
 import * as data from "../constants/contactInfo"
+import { Link } from "gatsby"
 import githubLogo from "../images/icons/githubLogo.svg"
 import instagramLogo from "../images/icons/instagramLogo.svg"
 import linkedinLogo from "../images/icons/linkedinLogo.svg"
@@ -70,8 +71,10 @@ export const Midsection = () => (
 				<SubheaderText>Featured work</SubheaderText>
 			</FeaturedProjectHeadingContainer>
 			<FeaturedProjectCardContainer>
+				<Link to="/projects/ecze">
+					<img src={featuredProjectEcze} style={{ maxHeight: "600px" }} />
+				</Link>
 				{/* Instead of an image, */}
-				<img src={featuredProjectEcze} style={{ maxHeight: "600px" }} />
 			</FeaturedProjectCardContainer>
 		</FeaturedProjectContainer>
 	</MidSectionWrapper>

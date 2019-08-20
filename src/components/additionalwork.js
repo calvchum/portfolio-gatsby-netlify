@@ -2,8 +2,8 @@ import React from "react"
 import styled from "styled-components"
 import { SubheaderText, media, colors } from "../utilities"
 import Img from "gatsby-image"
-import { Link } from "gatsby"
-import * as data from "../constants/projectInfo"
+import { Link, StaticQuery, graphql } from "gatsby"
+import * as data1 from "../constants/projectInfo"
 import { ProjectCard } from "./projectcard"
 
 const AdditionalWorkWrapper = styled.div`
@@ -53,18 +53,47 @@ const ProjectLink = styled(Link)`
 		padding: 0;
 		`};
 	}
-
 `
+// return (
+// 	<ProjectLink to={project.link} key={i}>
+// 		<ProjectCard project={project} />
+// 	</ProjectLink>
+// )
 
-export const AdditionalWork = () => (
-	<AdditionalWorkWrapper>
-		<ProjectTitle>Additional Work</ProjectTitle>
-		{data.projects.map((project, i) => {
-			return (
-				<ProjectLink to={project.link}>
-					<ProjectCard project={project} key={i} />
-				</ProjectLink>
-			)
-		})}
-	</AdditionalWorkWrapper>
-)
+export const AdditionalWork = () => {
+	return (
+		<StaticQuery
+			query={graphql`
+				query ProjectQuery {
+					allMarkdownRemark {
+						edges {
+							node {
+								frontmatter {
+									date
+									path
+									tags
+									title
+									organisation
+								}
+							}
+						}
+					}
+				}
+			`}
+			render={data => (
+				<AdditionalWorkWrapper>
+					<ProjectTitle>Additional Work</ProjectTitle>
+					{console.log(data.allMarkdownRemark.edges)}
+					{data.allMarkdownRemark.edges.map((edge, i) => {
+						console.log(edge.node.frontmatter.title)
+						return (
+							<ProjectLink to={edge.node.frontmatter.path}>
+								<ProjectCard project={edge.node.frontmatter} />
+							</ProjectLink>
+						)
+					})}
+				</AdditionalWorkWrapper>
+			)}
+		/>
+	)
+}
