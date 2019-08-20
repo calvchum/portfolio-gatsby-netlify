@@ -17,14 +17,29 @@ export default function Template({
   const { frontmatter, html } = markdownRemark
   const BlogPostContainer = styled.div`
     color: ${colors.almostBlack};
-    padding: 3em 0 3em 3em;
+    padding: 5em;
   `
+  const TagList = styled.li`
+    list-style: none;
+  `
+
+  const TagContainer = styled.ul`
+    margin: 1em 0 1em 0;
+  `
+
   return (
     <Layout>
       <BlogPostContainer>
         <div className="blog-post">
           <HeaderText>{frontmatter.title}</HeaderText>
           <BodyText>{frontmatter.date}</BodyText>
+          <TagContainer style={{ marginTop: "1em" }}>
+            {frontmatter.tags
+              ? frontmatter.tags.map((tag, i) => {
+                  return <TagList>{tag}</TagList>
+                })
+              : null}
+          </TagContainer>
           <div
             className="blog-post-content"
             dangerouslySetInnerHTML={{ __html: html }}
@@ -43,6 +58,7 @@ export const pageQuery = graphql`
         date
         path
         title
+        tags
       }
     }
   }

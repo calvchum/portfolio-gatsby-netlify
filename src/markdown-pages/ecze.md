@@ -1,6 +1,6 @@
 ---
 path: "/projects/ecze"
-date: "2019-20-08"
+date: "2019"
 title: "This is my story"
 ---
 
