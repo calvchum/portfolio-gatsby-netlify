@@ -17,7 +17,7 @@ const typography = new Typography({
 
 export const fontsize = {
 	hero: "2.67em",
-	h1: "2em",
+	h1: "2.2em",
 	subheader: "2em",
 	body: "1em",
 }
