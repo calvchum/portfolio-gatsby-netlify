@@ -18,6 +18,9 @@ export default function Template({
   const BlogPostContainer = styled.div`
     color: ${colors.almostBlack};
     padding: 5em;
+    ${media.small`
+      padding: 2em
+      `}
   `
   const TagList = styled.li`
     list-style: none;
