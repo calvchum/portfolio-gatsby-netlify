@@ -20,6 +20,9 @@ const AdditionalWorkWrapper = styled.div`
 	& a:hover {
 		color: ${colors.white};
 	}	
+	& div {
+		transition: 0.2s;
+	}
 	& div:hover {
 		background-color: ${colors.primary}
 	}
@@ -42,6 +45,7 @@ const ProjectLink = styled(Link)`
 		font-size: 1.5em;
 		padding-bottom: 0em;
 		margin-bottom: 0;
+		transition: 0.2s;
 		${media.small`
 		padding: 0;
 		`};
