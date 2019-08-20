@@ -38,17 +38,22 @@ const ProjectTitle = styled(SubheaderText)`
 `
 
 const ProjectLink = styled(Link)`
+	&:hover {
+		& h2 {
+			color: white
+		}
+	}
 	& h2 {
 		font-size: 1.5em;
 		padding-bottom: 0em;
 		margin-bottom: 0;
+		color: ${colors.primary};
+	}
 		${media.small`
 		padding: 0;
 		`};
 	}
-	& h2:hover {
-		color: ${colors.white};
-	}
+
 `
 
 export const AdditionalWork = () => (
