@@ -45,6 +45,12 @@ const CTA = styled.div`
 		padding: 1em
 	`}
 `
+const MessageWrapper = styled.div`
+	grid-row: 3/3;
+	& p {
+		font-size: 0.75em;
+	}
+`
 
 const Footer = () => (
 	<FooterWrapper>
@@ -57,6 +63,9 @@ const Footer = () => (
 		<FooterNavWrapper>
 			<Navigation list={data.contactData} internal={false} />
 		</FooterNavWrapper>
+		<MessageWrapper>
+			<p>this website is built with react and gatsby</p>
+		</MessageWrapper>
 	</FooterWrapper>
 )
 

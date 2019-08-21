@@ -65,7 +65,9 @@ export const AdditionalWork = () => {
 		<StaticQuery
 			query={graphql`
 				query ProjectQuery {
-					allMarkdownRemark {
+					allMarkdownRemark(
+						filter: { fileAbsolutePath: { regex: "/additionalwork/" } }
+					) {
 						edges {
 							node {
 								frontmatter {
@@ -83,11 +85,9 @@ export const AdditionalWork = () => {
 			render={data => (
 				<AdditionalWorkWrapper>
 					<ProjectTitle>Additional Work</ProjectTitle>
-					{console.log(data.allMarkdownRemark.edges)}
 					{data.allMarkdownRemark.edges.map((edge, i) => {
-						console.log(edge.node.frontmatter.title)
 						return (
-							<ProjectLink to={edge.node.frontmatter.path}>
+							<ProjectLink to={edge.node.frontmatter.path} key={i}>
 								<ProjectCard project={edge.node.frontmatter} />
 							</ProjectLink>
 						)

@@ -5,6 +5,7 @@ module.exports = {
     author: `@calvchum`,
   },
   plugins: [
+    `gatsby-plugin-typography`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
     {
@@ -17,8 +18,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `markdown-pages`,
-        path: `${__dirname}/src/markdown-pages`,
+        name: `additionalwork`,
+        path: `${__dirname}/src/additionalwork`,
       },
     },
     `gatsby-transformer-remark`,

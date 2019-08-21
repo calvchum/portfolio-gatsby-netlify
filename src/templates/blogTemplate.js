@@ -39,7 +39,7 @@ export default function Template({
           <TagContainer style={{ marginTop: "1em" }}>
             {frontmatter.tags
               ? frontmatter.tags.map((tag, i) => {
-                  return <TagList>{tag}</TagList>
+                  return <TagList key={i}>{tag}</TagList>
                 })
               : null}
           </TagContainer>
