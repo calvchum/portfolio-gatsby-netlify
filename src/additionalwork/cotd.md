@@ -1,6 +1,6 @@
 ---
 path: "/projects/cotd"
-date: "2019"
+date: "2018-12"
 title: "Catch of the Day"
 tags: ["firebase", "react"]
 organisation: "Personal"

@@ -1,6 +1,6 @@
 ---
 path: "/projects/prepclub"
-date: "2018"
+date: "2018-08"
 title: "Prep Club"
 tags: ["design", "ruby", "figma"]
 organisation: "Le Wagon"

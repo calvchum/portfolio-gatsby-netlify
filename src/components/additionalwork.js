@@ -67,11 +67,12 @@ export const AdditionalWork = () => {
 				query ProjectQuery {
 					allMarkdownRemark(
 						filter: { fileAbsolutePath: { regex: "/additionalwork/" } }
+						sort: { fields: frontmatter___date, order: DESC }
 					) {
 						edges {
 							node {
 								frontmatter {
-									date
+									date(formatString: "MMM, YYYY")
 									path
 									tags
 									title

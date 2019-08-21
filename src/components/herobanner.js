@@ -21,11 +21,11 @@ const HeroBannerContainer = styled.div`
 	padding: 3em 2em 4em 3em;
 	grid: repeat(2, auto) / 1fr;
 	justify-content: left;
-
+	color: ${colors.almostBlack};
 	${media.med`
 		grid-column: 1 / -1;
 		padding: 2em 2em 6em 2em;
-	`}
+	`};
 `
 const HeroBannerText = styled.div`
 	justify-content: left
@@ -44,6 +44,10 @@ const HeroBannerText = styled.div`
 	${media.small`
 		font-size: 0.75em;
 	`}
+`
+
+const HeroHeaderText = styled(HeaderText)`
+	color: ${colors.almostBlack};
 `
 const BannerLink = styled.a`
 	text-decoration: none;
@@ -67,26 +71,30 @@ const BannerLinkContainer = styled.div`
 export const HeroBanner = () => (
 	<HeroBannerWrapper>
 		<HeroBannerContainer>
-			<HeroBannerText>
-				<HeaderText>
-					I'm Calvin Cheung, a{" "}
-					<a href="https://github.com/calvchum">React developer</a> from
-					Melbourne
-					<br />
-					<br />
-					Currently front-end developer at{" "}
-					<a href="http://darkgreen.design">Darkgreen Designs</a>
-					<br />
-					<br />I believe life is about the journey of mastery
-				</HeaderText>
-			</HeroBannerText>
-			<BannerLinkContainer>
-				{data.contactData
-					.filter(item => item.title !== "Email")
-					.map((e, i) => {
-						return <BannerLinks data={e} key={i} />
-					})}
-			</BannerLinkContainer>
+			<Fade>
+				<HeroBannerText>
+					<HeroHeaderText>
+						I'm Calvin Cheung, a{" "}
+						<a href="https://github.com/calvchum">React developer</a> from
+						Melbourne
+						<br />
+						<br />
+						Currently front-end developer at{" "}
+						<a href="http://darkgreen.design">Darkgreen Designs</a>
+						<br />
+						<br />I believe life is about the journey of mastery
+					</HeroHeaderText>
+				</HeroBannerText>
+			</Fade>
+			<Fade>
+				<BannerLinkContainer>
+					{data.contactData
+						.filter(item => item.title !== "Email")
+						.map((e, i) => {
+							return <BannerLinks data={e} key={i} />
+						})}
+				</BannerLinkContainer>
+			</Fade>
 		</HeroBannerContainer>
 	</HeroBannerWrapper>
 )

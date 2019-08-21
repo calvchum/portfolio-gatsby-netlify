@@ -9,6 +9,7 @@ import {
   BodyText,
 } from "../utilities"
 import styled from "styled-components"
+import Fade from "react-reveal/Fade"
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
@@ -24,6 +25,8 @@ export default function Template({
   `
   const TagList = styled.li`
     list-style: none;
+    display: inline;
+    margin-right: 1em;
   `
 
   const TagContainer = styled.ul`
@@ -32,23 +35,25 @@ export default function Template({
 
   return (
     <Layout>
-      <BlogPostContainer>
-        <div className="blog-post">
-          <HeaderText>{frontmatter.title}</HeaderText>
-          <BodyText>{frontmatter.date}</BodyText>
-          <TagContainer style={{ marginTop: "1em" }}>
-            {frontmatter.tags
-              ? frontmatter.tags.map((tag, i) => {
-                  return <TagList key={i}>{tag}</TagList>
-                })
-              : null}
-          </TagContainer>
-          <div
-            className="blog-post-content"
-            dangerouslySetInnerHTML={{ __html: html }}
-          />
-        </div>
-      </BlogPostContainer>
+      <Fade>
+        <BlogPostContainer>
+          <div className="blog-post">
+            <HeaderText>{frontmatter.title}</HeaderText>
+            <BodyText>{frontmatter.date}</BodyText>
+            <TagContainer style={{ marginTop: "1em" }}>
+              {frontmatter.tags
+                ? frontmatter.tags.map((tag, i) => {
+                    return <TagList key={i}>{tag}</TagList>
+                  })
+                : null}
+            </TagContainer>
+            <div
+              className="blog-post-content"
+              dangerouslySetInnerHTML={{ __html: html }}
+            />
+          </div>
+        </BlogPostContainer>
+      </Fade>
     </Layout>
   )
 }
@@ -58,7 +63,7 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       frontmatter {
-        date
+        date(formatString: "MMM, YYYY")
         path
         title
         tags
