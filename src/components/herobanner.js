@@ -69,9 +69,9 @@ const BannerLinkContainer = styled.div`
 `
 
 export const HeroBanner = () => (
-	<HeroBannerWrapper>
-		<HeroBannerContainer>
-			<Fade>
+	<Fade>
+		<HeroBannerWrapper>
+			<HeroBannerContainer>
 				<HeroBannerText>
 					<HeroHeaderText>
 						I'm Calvin Cheung, a{" "}
@@ -85,8 +85,7 @@ export const HeroBanner = () => (
 						<br />I believe life is about the journey of mastery
 					</HeroHeaderText>
 				</HeroBannerText>
-			</Fade>
-			<Fade>
+
 				<BannerLinkContainer>
 					{data.contactData
 						.filter(item => item.title !== "Email")
@@ -94,7 +93,7 @@ export const HeroBanner = () => (
 							return <BannerLinks data={e} key={i} />
 						})}
 				</BannerLinkContainer>
-			</Fade>
-		</HeroBannerContainer>
-	</HeroBannerWrapper>
+			</HeroBannerContainer>
+		</HeroBannerWrapper>
+	</Fade>
 )
