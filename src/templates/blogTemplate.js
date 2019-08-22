@@ -11,10 +11,29 @@ import {
 import styled from "styled-components"
 import Fade from "react-reveal/Fade"
 import figmaIcon from "../images/icons/figma.svg"
+import rubyIcon from "../images/icons/ruby.svg"
+import expressIcon from "../images/icons/express.svg"
+import firebaseIcon from "../images/icons/firebase.svg"
+import gatsbyIcon from "../images/icons/gatsby.svg"
+import mongodbIcon from "../images/icons/mongodb.svg"
+import nodeIcon from "../images/icons/node.svg"
+import reactIcon from "../images/icons/react.svg"
+import shopifyIcon from "../images/icons/shopify.svg"
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
 }) {
+  const iconArray = [
+    { title: "figma", icon: figmaIcon },
+    { title: "ruby", icon: rubyIcon },
+    { title: "express", icon: expressIcon },
+    { title: "firebase", icon: firebaseIcon },
+    { title: "gatsby", icon: gatsbyIcon },
+    { title: "mongodb", icon: mongodbIcon },
+    { title: "node", icon: nodeIcon },
+    { title: "react", icon: reactIcon },
+    { title: "shopify", icon: shopifyIcon },
+  ]
   const { markdownRemark } = data // data.markdownRemark holds our post data
   const { frontmatter, html } = markdownRemark
   const BlogPostContainer = styled.div`

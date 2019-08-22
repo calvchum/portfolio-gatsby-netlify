@@ -15,10 +15,17 @@ import Img from "gatsby-image"
 
 const TechIcon = () => {
   const data = useStaticQuery(graphql`
-    query HeaderQuery {
-      site {
-        siteMetadata {
-          title
+    query {
+      allFile(filter: { ext: { eq: ".svg" } }) {
+        edges {
+          node {
+            name
+            relativePath
+            childImageSharp {
+              fluid(maxWidth: 150) {
+                ...GatsbyImageSharpFluid
+            }
+          }
         }
       }
     }
