@@ -34,6 +34,7 @@ export default function Template({
     { title: "react", icon: reactIcon },
     { title: "shopify", icon: shopifyIcon },
   ]
+
   const { markdownRemark } = data // data.markdownRemark holds our post data
   const { frontmatter, html } = markdownRemark
   const BlogPostContainer = styled.div`
@@ -78,10 +79,13 @@ export default function Template({
     `}
   `
   const TechIcon = styled.img`
-    width: 3em;
+    max-width: 3em;
+    margin-right: 1em;
   `
 
   const DateContainer = styled.div``
+
+  // return <TagList key={i}>{tag}</TagList>
 
   return (
     <Layout>
@@ -92,7 +96,15 @@ export default function Template({
           <TagContainer style={{ marginTop: "1em" }}>
             {frontmatter.tags
               ? frontmatter.tags.map((tag, i) => {
-                  return <TagList key={i}>{tag}</TagList>
+                  return iconArray.map(icon => {
+                    if (tag === icon.title) {
+                      return (
+                        <TechIcon src={icon.icon} alt={`${icon.title} logo`} />
+                      )
+                    } else {
+                      return null
+                    }
+                  })
                 })
               : null}
           </TagContainer>
@@ -101,7 +113,6 @@ export default function Template({
             dangerouslySetInnerHTML={{ __html: html }}
           />
         </BlogPostContainer>
-        <TechIcon src={figmaIcon} alt="Figma icon" />
       </Fade>
     </Layout>
   )
