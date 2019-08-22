@@ -21,6 +21,7 @@ const AdditionalWorkWrapper = styled.div`
 		color: ${colors.white};
 	}	
 	& div:hover {
+		box-shadow: 0 0 0 0;
 		background-color: ${colors.primary}
 	}
 `

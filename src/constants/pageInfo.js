@@ -1,11 +1,7 @@
 export const pageData = [
   {
-    title: "who i am",
+    title: "about",
     link: "/about",
-  },
-  {
-    title: "what i do",
-    link: "/work",
   },
   {
     title: "blog",

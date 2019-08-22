@@ -1,9 +1,9 @@
 ---
-path: "/projects/ecze"
-date: "2019-07"
-title: "Ecze"
-tags: ["react", "contentful", "netlify", "gatsby"]
-organisation: "Darkgreen Design"
+path: "/projects/stacked"
+date: "2019-01"
+title: "Stacked"
+tags: ["node", "express", "web scraping", "react"]
+organisation: "Personal"
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et rhoncus metus, nec sollicitudin diam. Curabitur vel diam eu nisl convallis rutrum. Nunc feugiat dictum ligula. Cras ut venenatis turpis. Maecenas a ornare dui, eget sagittis purus. Mauris vestibulum massa id turpis rhoncus, quis ultricies orci vulputate. Duis vel malesuada justo, eget tincidunt mauris.
