@@ -29,11 +29,19 @@ export default function Template({
     margin: 1em 0 1em 0;
     padding-top: 2em;
     grid-row: 3/3;
+    ${media.small`
+      grid-column: 1 / -1;
+      display: flex;
+      justify-content: center;
+    `}
   `
 
   const TagList = styled.li`
     list-style: none;
     margin-right: 1em;
+    ${media.small`
+      display: inline;
+    `}
   `
 
   const ProjectHeaderText = styled(HeaderText)`
@@ -44,6 +52,10 @@ export default function Template({
     grid-column: 2 / -1;
     grid-row: 3/4;
     padding: 2em;
+    ${media.small`
+      grid-row: 4 / 5;
+      grid-column: 1 / -1;
+    `}
   `
 
   const DateContainer = styled.div``
