@@ -18,40 +18,53 @@ export default function Template({
   const { frontmatter, html } = markdownRemark
   const BlogPostContainer = styled.div`
     color: ${colors.almostBlack};
-    padding: 5em;
+    padding: 2em 6em 6em 6em;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
     ${media.small`
       padding: 2em
       `}
   `
+  const TagContainer = styled.ul`
+    margin: 1em 0 1em 0;
+    padding-top: 2em;
+    grid-row: 3/3;
+  `
+
   const TagList = styled.li`
     list-style: none;
-    display: inline;
     margin-right: 1em;
   `
 
-  const TagContainer = styled.ul`
-    margin: 1em 0 1em 0;
+  const ProjectHeaderText = styled(HeaderText)`
+    text-align: left;
+    grid-column: 1 / -1;
   `
+  const ProjectTextContainer = styled.div`
+    grid-column: 2 / -1;
+    grid-row: 3/4;
+    padding: 2em;
+  `
+
+  const DateContainer = styled.div``
 
   return (
     <Layout>
       <Fade>
         <BlogPostContainer>
-          <div className="blog-post">
-            <HeaderText>{frontmatter.title}</HeaderText>
-            <BodyText>{frontmatter.date}</BodyText>
-            <TagContainer style={{ marginTop: "1em" }}>
-              {frontmatter.tags
-                ? frontmatter.tags.map((tag, i) => {
-                    return <TagList key={i}>{tag}</TagList>
-                  })
-                : null}
-            </TagContainer>
-            <div
-              className="blog-post-content"
-              dangerouslySetInnerHTML={{ __html: html }}
-            />
-          </div>
+          <ProjectHeaderText>{frontmatter.title}</ProjectHeaderText>
+          <DateContainer>{frontmatter.date}</DateContainer>
+          <TagContainer style={{ marginTop: "1em" }}>
+            {frontmatter.tags
+              ? frontmatter.tags.map((tag, i) => {
+                  return <TagList key={i}>{tag}</TagList>
+                })
+              : null}
+          </TagContainer>
+          <ProjectTextContainer
+            className="blog-post-content"
+            dangerouslySetInnerHTML={{ __html: html }}
+          />
         </BlogPostContainer>
       </Fade>
     </Layout>
