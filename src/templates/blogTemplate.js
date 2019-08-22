@@ -50,6 +50,8 @@ export default function Template({
     margin: 1em 0 1em 0;
     padding-top: 2em;
     grid-row: 3/3;
+    display: flex;
+    flex-direction: column;
     ${media.small`
       grid-column: 1 / -1;
       display: flex;
@@ -72,15 +74,15 @@ export default function Template({
   const ProjectTextContainer = styled.div`
     grid-column: 2 / -1;
     grid-row: 3/4;
-    padding: 2em;
+    padding: 4em;
     ${media.small`
       grid-row: 4 / 5;
       grid-column: 1 / -1;
     `}
   `
   const TechIcon = styled.img`
-    max-width: 3em;
-    margin-right: 1em;
+    height: 50px;
+    margin: 0;
   `
 
   const DateContainer = styled.div``
