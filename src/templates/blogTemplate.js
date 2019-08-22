@@ -20,7 +20,7 @@ export default function Template({
     color: ${colors.almostBlack};
     padding: 2em 6em 6em 6em;
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 3fr;
     ${media.small`
       padding: 2em
       `}
