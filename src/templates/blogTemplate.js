@@ -10,6 +10,7 @@ import {
 } from "../utilities"
 import styled from "styled-components"
 import Fade from "react-reveal/Fade"
+import figmaIcon from "../images/icons/figma.svg"
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
@@ -57,6 +58,9 @@ export default function Template({
       grid-column: 1 / -1;
     `}
   `
+  const TechIcon = styled.img`
+    width: 3em;
+  `
 
   const DateContainer = styled.div``
 
@@ -78,6 +82,7 @@ export default function Template({
             dangerouslySetInnerHTML={{ __html: html }}
           />
         </BlogPostContainer>
+        <TechIcon src={figmaIcon} alt="Figma icon" />
       </Fade>
     </Layout>
   )
@@ -92,6 +97,14 @@ export const pageQuery = graphql`
         path
         title
         tags
+      }
+    }
+    allFile(filter: { ext: { eq: ".svg" } }) {
+      edges {
+        node {
+          name
+          relativePath
+        }
       }
     }
   }
