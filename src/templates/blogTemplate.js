@@ -60,6 +60,7 @@ export default function Template({
     color: ${colors.almostBlack};
     ${media.small`
       text-align: center;
+      padding: 0;
       grid-column: 1 / -1;
       `};
   `
@@ -68,6 +69,7 @@ export default function Template({
     padding-left: 4em;
     grid-column: 2 / -1;
     ${media.small`
+      padding: 0;
       text-align: center;
       grid-column: 1 / -1;
       `};
