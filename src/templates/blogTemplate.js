@@ -103,6 +103,7 @@ export default function Template({ data }) {
       text-decoration: none;
       color: ${colors.primary};
       transition: 0.2s;
+      font-weight: 300;
     }
     & a:hover {
       color: ${colors.almostBlack};

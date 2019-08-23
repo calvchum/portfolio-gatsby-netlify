@@ -34,6 +34,9 @@ const FooterNavWrapper = styled.ul`
 		display: flex;
 		justify-content: space-between;
 	`}
+	${media.small`
+		padding: 0em 2.5em 0em 2.5em;
+	`}
 `
 const CTASubheader = styled(SubheaderText)`
 	margin: 0.4em 0 0 0;
