@@ -16,4 +16,4 @@ Final project of a 9-week intensive full-stack coding bootcamp. Built in 2 weeks
 ###my thoughts
 My first ever website
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/s3O4sVAhQtk?start=2013" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="400" height="224" src="https://www.youtube.com/embed/s3O4sVAhQtk?start=2013" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

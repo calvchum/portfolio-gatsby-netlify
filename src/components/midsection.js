@@ -6,7 +6,7 @@ import { Link } from "gatsby"
 import githubLogo from "../images/icons/githubLogo.svg"
 import instagramLogo from "../images/icons/instagramLogo.svg"
 import linkedinLogo from "../images/icons/linkedinLogo.svg"
-import featuredProjectEcze from "../images/ECZEprojectCard-square.png"
+import featuredProjectEcze from "../images/ECZE projectCardsquarenoshadow.png"
 import Img from "gatsby-image"
 import Fade from "react-reveal/Fade"
 
@@ -56,6 +56,15 @@ const iconArray = [
 	{ name: "linkedinLogo", icon: linkedinLogo },
 ]
 
+const FeaturedImg = styled.img`
+	max-height: 600px;
+	transition: 0.1s;
+	&:hover {
+		transform: translateY(-3px);
+		box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.25);
+	}
+`
+
 data.contactData.forEach(object => {
 	iconArray.forEach(logo => {
 		if (object.icon === logo.name) {
@@ -72,7 +81,10 @@ export const Midsection = () => (
 			</FeaturedProjectHeadingContainer>
 			<FeaturedProjectCardContainer>
 				<Link to="/projects/ecze">
-					<img src={featuredProjectEcze} style={{ maxHeight: "600px" }} />
+					<FeaturedImg
+						src={featuredProjectEcze}
+						style={{ maxHeight: "600px" }}
+					/>
 				</Link>
 				{/* Instead of an image, */}
 			</FeaturedProjectCardContainer>

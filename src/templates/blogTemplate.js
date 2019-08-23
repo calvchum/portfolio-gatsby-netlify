@@ -23,9 +23,7 @@ import contentfulIcon from "../images/icons/contentful.svg"
 import netlifyIcon from "../images/icons/netlify.svg"
 import graphqlIcon from "../images/icons/graphql.svg"
 
-export default function Template({
-  data, // this prop will be injected by the GraphQL query below.
-}) {
+export default function Template({ data }) {
   const iconArray = [
     { title: "figma", icon: figmaIcon },
     { title: "ruby", icon: rubyIcon },
@@ -101,21 +99,28 @@ export default function Template({
     grid-column: 2 / -1;
     grid-row: 3 / 4;
     padding: 4em;
+    & a {
+      text-decoration: none;
+      color: ${colors.primary};
+      transition: 0.2s;
+    }
+    & a:hover {
+      color: ${colors.almostBlack};
+    }
     & p {
       font-weight: 200;
       colors: ${colors.almostBlack};
     }
     & h3 {
       font-weight: 400;
-      color: ${colors.primary};
+      color: ${colors.almostBlack};
     }
     & h4 {
-      color: ${colors.primary};
+      color: ${colors.almostBlack};
     }
     & b,
     strong {
       font-weight: 400;
-      color: ${colors.primary};
     }
     ${media.small`
       grid-row: 4 / 5;
