@@ -6,7 +6,7 @@ import { Link } from "gatsby"
 import githubLogo from "../images/icons/githubLogo.svg"
 import instagramLogo from "../images/icons/instagramLogo.svg"
 import linkedinLogo from "../images/icons/linkedinLogo.svg"
-import featuredProjectEcze from "../images/ECZEprojectCard3.png"
+import featuredProjectEcze from "../images/ECZEprojectCard-square.png"
 import Img from "gatsby-image"
 import Fade from "react-reveal/Fade"
 

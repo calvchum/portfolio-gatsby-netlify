@@ -1,6 +1,6 @@
 ---
 path: "/projects/emaily"
-date: "2019-03"
+date: "2019-02"
 title: "Emaily"
 tags: ["node", "react", "mongoDB", "express"]
 organisation: "Personal"

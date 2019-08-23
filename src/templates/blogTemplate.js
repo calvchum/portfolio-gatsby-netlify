@@ -12,7 +12,7 @@ import styled from "styled-components"
 import Fade from "react-reveal/Fade"
 import figmaIcon from "../images/icons/figma.svg"
 import rubyIcon from "../images/icons/ruby.svg"
-import expressIcon from "../images/icons/express.svg"
+import expressIcon from "../images/icons/javascript.svg"
 import firebaseIcon from "../images/icons/firebase.svg"
 import gatsbyIcon from "../images/icons/gatsby.svg"
 import mongodbIcon from "../images/icons/mongodb.svg"
@@ -136,7 +136,7 @@ export default function Template({
         <BlogPostContainer>
           <ProjectHeaderText>{frontmatter.title}</ProjectHeaderText>
           <DateContainer>{frontmatter.date}</DateContainer>
-          <IconContainer style={{ marginTop: "1em" }}>
+          <IconContainer>
             {frontmatter.tags
               ? frontmatter.tags.map((tag, i) => {
                   return iconArray.map(icon => {
