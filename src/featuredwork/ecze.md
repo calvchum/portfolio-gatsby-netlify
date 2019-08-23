@@ -6,6 +6,8 @@ tags: ["react", "graphql", "contentful", "netlify", "gatsby", "figma"]
 organisation: "Darkgreen Design"
 ---
 
+![ecze screenshot](https://i.ibb.co/x7sx684/screenshot.png)
+
 ### background
 
 Client wanted a React site designed and built from scratch with the following features: SEO friendly, blog, blog filter, email sign-up. This is Phase 1, the next phase will integrate the Shopify Storefront API.
