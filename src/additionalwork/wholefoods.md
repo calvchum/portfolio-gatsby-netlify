@@ -2,7 +2,7 @@
 path: "/projects/wholefoods"
 date: "2019-02"
 title: "Wholefoods E-Commerce"
-tags: ["react", "shopify", "graphql"]
+tags: ["react", "shopify", "graphql", "figma"]
 organisation: "Darkgreen Designs"
 ---
 

@@ -6,12 +6,15 @@ tags: ["react", "graphql", "contentful", "netlify", "gatsby"]
 organisation: "Darkgreen Design"
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et rhoncus metus, nec sollicitudin diam. Curabitur vel diam eu nisl convallis rutrum. Nunc feugiat dictum ligula. Cras ut venenatis turpis. Maecenas a ornare dui, eget sagittis purus. Mauris vestibulum massa id turpis rhoncus, quis ultricies orci vulputate. Duis vel malesuada justo, eget tincidunt mauris.
+### Background
 
-Aenean diam arcu, pharetra et lacus et, ultricies laoreet neque. Maecenas lorem est, bibendum at vestibulum ut, imperdiet vel ligula. Maecenas eget est sit amet mauris interdum porta sit amet ut ex. Sed non viverra lectus, a venenatis ligula. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean eu varius enim. Nunc non sodales eros. Quisque eget leo nec turpis sodales cursus sit amet quis enim. Duis non auctor nunc. Etiam et ipsum mauris. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+Client wanted a React site designed and built from scratch with the following features: SEO friendly, blog, blog filter, email sign-up. This is Phase 1, the next phase will integrate the Shopify Storefront API.
 
-Phasellus sed ex et justo feugiat convallis nec non lorem. Morbi quis sagittis dui. Nullam vehicula felis erat, sed sagittis massa eleifend ac. Sed sit amet maximus libero. Aenean facilisis ex eget odio pellentesque rutrum. In pharetra posuere erat eget tempor. Phasellus imperdiet nunc nisl, ac vehicula enim sollicitudin ac.
+---
 
-Maecenas felis justo, placerat et orci sit amet, pretium rhoncus nibh. Nunc pharetra, nulla vitae sagittis aliquam, dolor massa dictum leo, sed venenatis eros ipsum in erat. Cras quis lacinia mauris. Nullam at mattis elit. Proin efficitur pretium sem, vitae ultrices tortor condimentum non. In vitae magna sit amet mi mollis vestibulum a ut ante. Nam maximus metus in purus eleifend, et posuere leo finibus.
+### The Stack
 
-Nullam eget nisi vitae metus pretium bibendum. Donec placerat leo pellentesque purus auctor pretium. Aliquam vitae commodo augue. Praesent quis gravida risus, non mollis lacus. Maecenas varius purus vel ante rhoncus mattis. Ut faucibus est vitae lorem posuere, id consequat purus dapibus. Curabitur elementum vulputate dui, vitae congue nisl consequat ac. In at sagittis velit, sit amet fringilla augue. In efficitur odio risus, a ornare quam pulvinar at.
+**Gatsby** was chosen as the React framework due to it being a Server Side Rendered static site, which is more SEO friendly. This also allowed the use of neat Gatsby features such as fluid image loading and link hover pre-fetching. The result is, this is probably the fastest Ecze related website on the web right now.
+
+For the backend, rather than build a Content Management System (CMS) from scratch, we opted to save development time by using a headless CMS - in this case, **Contentful** was chosen. This turned out to be a great choice as their API was very easy to integrate. Importantly, the client has a secure and robust back-end UI from where to manage their content.
+

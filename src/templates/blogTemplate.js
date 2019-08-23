@@ -17,8 +17,8 @@ import firebaseIcon from "../images/icons/firebase.svg"
 import gatsbyIcon from "../images/icons/gatsby.svg"
 import mongodbIcon from "../images/icons/mongodb.svg"
 import nodeIcon from "../images/icons/node.svg"
-import reactIcon from "../images/icons/react.svg"
-import shopifyIcon from "../images/icons/shopify.svg"
+import reactIcon from "../images/icons/react2.svg"
+import shopifyIcon from "../images/icons/shopify1.svg"
 import contentfulIcon from "../images/icons/contentful.svg"
 import netlifyIcon from "../images/icons/netlify.svg"
 import graphqlIcon from "../images/icons/graphql.svg"
@@ -55,14 +55,18 @@ export default function Template({
   `
   const ProjectHeaderText = styled(HeaderText)`
     text-align: left;
-    grid-column: 1 / -1;
+    padding-left: 64px;
+    grid-column: 2 / -1;
     color: ${colors.almostBlack};
     ${media.small`
       text-align: center;
+      grid-column: 1 / -1;
       `};
   `
 
   const DateContainer = styled.div`
+    padding-left: 4em;
+    grid-column: 2 / -1;
     ${media.small`
       text-align: center;
       grid-column: 1 / -1;
@@ -95,6 +99,22 @@ export default function Template({
     grid-column: 2 / -1;
     grid-row: 3 / 4;
     padding: 4em;
+    & p {
+      font-weight: 200;
+      colors: ${colors.almostBlack};
+    }
+    & h3 {
+      font-weight: 400;
+      color: ${colors.primary};
+    }
+    & h4 {
+      color: ${colors.primary};
+    }
+    & b,
+    strong {
+      font-weight: 400;
+      color: ${colors.primary};
+    }
     ${media.small`
       grid-row: 4 / 5;
       grid-column: 1 / -1;

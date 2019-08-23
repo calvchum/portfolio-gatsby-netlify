@@ -68,11 +68,6 @@ const Footer = () => (
 		<FooterNavWrapper>
 			<Navigation list={data.contactData} internal={false} />
 		</FooterNavWrapper>
-		<MessageWrapper>
-			<FooterBodyText>
-				this website is built with react and gatsby
-			</FooterBodyText>
-		</MessageWrapper>
 	</FooterWrapper>
 )
 
