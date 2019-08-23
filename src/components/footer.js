@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { colors, media, SubheaderText } from "../utilities"
+import { colors, media, SubheaderText, BodyText } from "../utilities"
 import Navigation from "./navigation"
 import * as data from "../constants/contactInfo"
 import Fade from "react-reveal/Fade"
@@ -47,9 +47,14 @@ const CTA = styled.div`
 `
 const MessageWrapper = styled.div`
 	grid-row: 3/3;
+	text-align: center;
 	& p {
 		font-size: 0.75em;
 	}
+`
+
+const FooterBodyText = styled(BodyText)`
+	grid-column: 1 / -1;
 `
 
 const Footer = () => (
@@ -64,7 +69,9 @@ const Footer = () => (
 			<Navigation list={data.contactData} internal={false} />
 		</FooterNavWrapper>
 		<MessageWrapper>
-			<p>this website is built with react and gatsby</p>
+			<FooterBodyText>
+				this website is built with react and gatsby
+			</FooterBodyText>
 		</MessageWrapper>
 	</FooterWrapper>
 )

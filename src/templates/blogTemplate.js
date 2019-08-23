@@ -10,29 +10,74 @@ import {
 } from "../utilities"
 import styled from "styled-components"
 import Fade from "react-reveal/Fade"
+import figmaIcon from "../images/icons/figma.svg"
+import rubyIcon from "../images/icons/ruby.svg"
+import expressIcon from "../images/icons/express.svg"
+import firebaseIcon from "../images/icons/firebase.svg"
+import gatsbyIcon from "../images/icons/gatsby.svg"
+import mongodbIcon from "../images/icons/mongodb.svg"
+import nodeIcon from "../images/icons/node.svg"
+import reactIcon from "../images/icons/react.svg"
+import shopifyIcon from "../images/icons/shopify.svg"
+import contentfulIcon from "../images/icons/contentful.svg"
+import netlifyIcon from "../images/icons/netlify.svg"
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
 }) {
+  const iconArray = [
+    { title: "figma", icon: figmaIcon },
+    { title: "ruby", icon: rubyIcon },
+    { title: "express", icon: expressIcon },
+    { title: "firebase", icon: firebaseIcon },
+    { title: "gatsby", icon: gatsbyIcon },
+    { title: "mongodb", icon: mongodbIcon },
+    { title: "node", icon: nodeIcon },
+    { title: "react", icon: reactIcon },
+    { title: "shopify", icon: shopifyIcon },
+    { title: "contentful", icon: contentfulIcon },
+    { title: "netlify", icon: netlifyIcon },
+  ]
+
   const { markdownRemark } = data // data.markdownRemark holds our post data
   const { frontmatter, html } = markdownRemark
+
   const BlogPostContainer = styled.div`
     color: ${colors.almostBlack};
     padding: 2em 6em 6em 6em;
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 3fr;
     ${media.small`
       padding: 2em
       `}
   `
-  const TagContainer = styled.ul`
+  const ProjectHeaderText = styled(HeaderText)`
+    text-align: left;
+    grid-column: 1 / -1;
+    color: ${colors.almostBlack};
+    ${media.small`
+      text-align: center;
+      `};
+  `
+
+  const DateContainer = styled.div`
+    ${media.small`
+      text-align: center;
+      grid-column: 1 / -1;
+      `};
+  `
+
+  const IconContainer = styled.div`
     margin: 1em 0 1em 0;
-    padding-top: 2em;
+    padding-top: 3em;
     grid-row: 3/3;
+    display: flex;
+    flex-direction: column;
     ${media.small`
       grid-column: 1 / -1;
       display: flex;
-      justify-content: center;
+      flex-direction: row;
+      justify-content: space-around;
     `}
   `
 
@@ -44,21 +89,22 @@ export default function Template({
     `}
   `
 
-  const ProjectHeaderText = styled(HeaderText)`
-    text-align: left;
-    grid-column: 1 / -1;
-  `
-  const ProjectTextContainer = styled.div`
+  const ProjectBody = styled.div`
     grid-column: 2 / -1;
-    grid-row: 3/4;
-    padding: 2em;
+    grid-row: 3 / 4;
+    padding: 4em;
     ${media.small`
       grid-row: 4 / 5;
       grid-column: 1 / -1;
+      padding: 2em 1.5em 0em 1.5em;
     `}
   `
+  const TechIcon = styled.img`
+    height: 50px;
+    margin-bottom: 1.5em;
+  `
 
-  const DateContainer = styled.div``
+  // return <TagList key={i}>{tag}</TagList>
 
   return (
     <Layout>
@@ -66,17 +112,22 @@ export default function Template({
         <BlogPostContainer>
           <ProjectHeaderText>{frontmatter.title}</ProjectHeaderText>
           <DateContainer>{frontmatter.date}</DateContainer>
-          <TagContainer style={{ marginTop: "1em" }}>
+          <IconContainer style={{ marginTop: "1em" }}>
             {frontmatter.tags
               ? frontmatter.tags.map((tag, i) => {
-                  return <TagList key={i}>{tag}</TagList>
+                  return iconArray.map(icon => {
+                    if (tag === icon.title) {
+                      return (
+                        <TechIcon src={icon.icon} alt={`${icon.title} logo`} />
+                      )
+                    } else {
+                      return null
+                    }
+                  })
                 })
               : null}
-          </TagContainer>
-          <ProjectTextContainer
-            className="blog-post-content"
-            dangerouslySetInnerHTML={{ __html: html }}
-          />
+          </IconContainer>
+          <ProjectBody dangerouslySetInnerHTML={{ __html: html }} />
         </BlogPostContainer>
       </Fade>
     </Layout>
@@ -92,6 +143,14 @@ export const pageQuery = graphql`
         path
         title
         tags
+      }
+    }
+    allFile(filter: { ext: { eq: ".svg" } }) {
+      edges {
+        node {
+          name
+          relativePath
+        }
       }
     }
   }
