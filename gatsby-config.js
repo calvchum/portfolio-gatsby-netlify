@@ -22,6 +22,13 @@ module.exports = {
         path: `${__dirname}/src/additionalwork`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `featuredwork`,
+        path: `${__dirname}/src/featuredwork`,
+      },
+    },
     `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

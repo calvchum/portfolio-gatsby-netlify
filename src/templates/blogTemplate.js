@@ -21,6 +21,7 @@ import reactIcon from "../images/icons/react.svg"
 import shopifyIcon from "../images/icons/shopify.svg"
 import contentfulIcon from "../images/icons/contentful.svg"
 import netlifyIcon from "../images/icons/netlify.svg"
+import graphqlIcon from "../images/icons/graphql.svg"
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
@@ -37,6 +38,7 @@ export default function Template({
     { title: "shopify", icon: shopifyIcon },
     { title: "contentful", icon: contentfulIcon },
     { title: "netlify", icon: netlifyIcon },
+    { title: "graphql", icon: graphqlIcon },
   ]
 
   const { markdownRemark } = data // data.markdownRemark holds our post data

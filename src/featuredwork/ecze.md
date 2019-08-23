@@ -2,7 +2,7 @@
 path: "/projects/ecze"
 date: "2019-07"
 title: "Ecze"
-tags: ["react", "contentful", "netlify", "gatsby"]
+tags: ["react", "graphql", "contentful", "netlify", "gatsby"]
 organisation: "Darkgreen Design"
 ---
 
