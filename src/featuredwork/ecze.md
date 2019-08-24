@@ -12,8 +12,6 @@ organisation: "Darkgreen Design"
 
 Client wanted a React site designed and built from scratch with the following features: SEO friendly, blog, blog filter, email sign-up. This is Phase 1, the next phase will integrate the Shopify Storefront API.
 
----
-
 ### the stack
 
 **Gatsby** was chosen as the React framework due to it being a Server Side Rendered static site, which is more SEO friendly. This also allowed the use of neat Gatsby features such as fluid image loading and link hover pre-fetching. The result is, this is probably the fastest Ecze related website on the web right now.
@@ -23,6 +21,10 @@ For the backend, rather than build a Content Management System (CMS) from scratc
 To make the most of Contentful and Gatsby, it's best to use the query language **GraphQL**. The biggest benefit to using Graphql in this project was being able to re-use React components by simply changing the query.
 
 It was important for us to have continuous deployment in order to get feedback from the client so we could iterate in an agile fashion. For this purpose I found **Netlify** to be well integrated with the existing stack - with their webhooks worked well with Github and Contentful. Automatically rebuilding the site whenever new content or code is pushed means less developer maintence after handover.
+
+### thoughts
+
+This project opened my eyes to the potential of utilising JAMstack - that is, modern front-end frameworks that make API calls from a Back-end as a Service (BaaS). By utilising BaaS we saved development time for the client and provided a more integrated and secure solution to their needs.
 
 [GitHub repo →](https://github.com/calvchum/ecze-dev-beta/)
 

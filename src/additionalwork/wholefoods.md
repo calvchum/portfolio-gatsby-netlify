@@ -6,20 +6,26 @@ tags: ["react", "shopify", "graphql", "figma"]
 organisation: "Darkgreen Designs"
 ---
 
-#### Background:
+![wholefoods screenshot](https://miro.medium.com/max/12534/1*7Io_m8RdW-bAyldx4ixF7A.png)
 
-The aim was to create a fully functional e-Commerce site
+#### background:
+
+The aim was to create a fully functional e-Commerce site for Wholefoods Australia. The core functionality was two-fold - every product should be searchable and it would use Shopify's Storefront API.
 
 ---
 
-#### The Stack:
+#### the stack:
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et rhoncus metus, nec sollicitudin diam. Curabitur vel diam eu nisl convallis rutrum. Nunc feugiat dictum ligula. Cras ut venenatis turpis. Maecenas a ornare dui, eget sagittis purus. Mauris vestibulum massa id turpis rhoncus, quis ultricies orci vulputate. Duis vel malesuada justo, eget tincidunt mauris.
+Figma for design and wireframes, React for the front-end. The main API being utilised was Shopify's Storefront API which allows access to any product, price, and checkout on shopify.
 
-Aenean diam arcu, pharetra et lacus et, ultricies laoreet neque. Maecenas lorem est, bibendum at vestibulum ut, imperdiet vel ligula. Maecenas eget est sit amet mauris interdum porta sit amet ut ex. Sed non viverra lectus, a venenatis ligula. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean eu varius enim. Nunc non sodales eros. Quisque eget leo nec turpis sodales cursus sit amet quis enim. Duis non auctor nunc. Etiam et ipsum mauris. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+---
 
-Phasellus sed ex et justo feugiat convallis nec non lorem. Morbi quis sagittis dui. Nullam vehicula felis erat, sed sagittis massa eleifend ac. Sed sit amet maximus libero. Aenean facilisis ex eget odio pellentesque rutrum. In pharetra posuere erat eget tempor. Phasellus imperdiet nunc nisl, ac vehicula enim sollicitudin ac.
+#### thoughts:
 
-Maecenas felis justo, placerat et orci sit amet, pretium rhoncus nibh. Nunc pharetra, nulla vitae sagittis aliquam, dolor massa dictum leo, sed venenatis eros ipsum in erat. Cras quis lacinia mauris. Nullam at mattis elit. Proin efficitur pretium sem, vitae ultrices tortor condimentum non. In vitae magna sit amet mi mollis vestibulum a ut ante. Nam maximus metus in purus eleifend, et posuere leo finibus.
+Great project that allowed me and my team to develop a solution for a client. Writing the search function in vanilla javascript was a good learning experience but in the future I will use libraries such as Algolia for added robustness. Read further on my thoughts on my Medium article linked below.
 
-Nullam eget nisi vitae metus pretium bibendum. Donec placerat leo pellentesque purus auctor pretium. Aliquam vitae commodo augue. Praesent quis gravida risus, non mollis lacus. Maecenas varius purus vel ante rhoncus mattis. Ut faucibus est vitae lorem posuere, id consequat purus dapibus. Curabitur elementum vulputate dui, vitae congue nisl consequat ac. In at sagittis velit, sit amet fringilla augue. In efficitur odio risus, a ornare quam pulvinar at.
+[Development writeup →](https://medium.com/@calvchum/building-a-shopify-e-commerce-store-using-react-719000bf7440)
+
+[UI/UX writeup →](https://medium.com/@BQWA/organic-wholefoods-ux-case-study-f41e42d38ea1)
+
+[GitHub repo →](https://github.com/calvchum/wholefoods-shopify)
