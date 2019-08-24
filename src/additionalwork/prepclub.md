@@ -25,4 +25,5 @@ Click below for the full pitch:
 
 <iframe width="400" height="224" src="https://www.youtube.com/embed/s3O4sVAhQtk?start=2013" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+[Figma mockups →](https://www.figma.com/file/fe8qxfgfbZN3JJ15kL2I2VBZ/fitBite-webapp-mockup)
 [GitHub repo →](https://github.com/smithavt14/prep-club)
