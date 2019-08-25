@@ -7,6 +7,7 @@ import {
 	media,
 	colors,
 } from "../utilities"
+import { Link } from "gatsby"
 import { BannerLinks } from "./bannerlinks"
 import * as data from "../constants/contactInfo"
 import Fade from "react-reveal/Fade"
@@ -82,7 +83,10 @@ export const HeroBanner = () => (
 						Currently front-end developer at{" "}
 						<a href="http://darkgreen.design">Darkgreen Designs</a>
 						<br />
-						<br />I believe life is about the journey of mastery
+						<br />I believe life is about the <Link to="/about">
+							journey
+						</Link>{" "}
+						of mastery
 					</HeroHeaderText>
 				</HeroBannerText>
 
