@@ -27,7 +27,8 @@
     "react-reveal": "^1.2.2",
     "react-typography": "^0.16.19",
     "styled-components": "^4.3.2",
-    "typography": "^0.16.19"
+    "typography": "^0.16.19",
+    "vertical-timeline-component-for-react": "^1.0.6"
   },
   "devDependencies": {
     "prettier": "^1.18.2"
