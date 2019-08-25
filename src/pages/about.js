@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 import styled from "styled-components"
-import { colors, SubheaderText } from "../utilities"
+import { colors, SubheaderText, BodyText } from "../utilities"
 import { HeroBanner } from "../components/herobanner"
 import { BannerLinks } from "../components/bannerlinks"
 import { Midsection } from "../components/midsection"
@@ -17,6 +17,21 @@ const AccentText = styled(SubheaderText)`
 const MainWrapper = styled.div`
 	padding: 3em;
 `
+
+const TimeLineHeading = styled(SubheaderText)`
+	font-size: 1.5em;
+	color: ${colors.almostBlack};
+`
+const TimeLineSubHeading = styled(SubheaderText)`
+	font-size: 1em;
+	color: ${colors.almostBlack};
+`
+
+const TimeLineBody = styled(BodyText)`
+	font-size: 0.8em;
+	color: ${colors.almostBlack};
+`
+
 const IndexPage = () => (
 	<Layout>
 		<SEO title="About" />
@@ -25,32 +40,18 @@ const IndexPage = () => (
 			<Timeline lineColor={"#ddd"}>
 				<TimelineItem
 					key="001"
-					dateText="11/2010 – Present"
+					dateText="2014 - 2017"
 					style={{ color: "#e86971" }}
 				>
-					<h3>Title, Company</h3>
-					<h4>Subtitle</h4>
-					<p>
-						Est incididunt sint eu minim dolore mollit velit velit commodo ex
-						nulla exercitation. Veniam velit adipisicing anim excepteur nostrud
-						magna nostrud aliqua dolor. Sunt aute est duis ut nulla officia
-						irure reprehenderit laborum fugiat dolore in elit. Adipisicing do
-						qui duis Lorem est.
-					</p>
-					<p>
-						Est incididunt sint eu minim dolore mollit velit velit commodo ex
-						nulla exercitation. Veniam velit adipisicing anim excepteur nostrud
-						magna nostrud aliqua dolor. Sunt aute est duis ut nulla officia
-						irure reprehenderit laborum fugiat dolore in elit. Adipisicing do
-						qui duis Lorem est.
-					</p>
-					<p>
-						Est incididunt sint eu minim dolore mollit velit velit commodo ex
-						nulla exercitation. Veniam velit adipisicing anim excepteur nostrud
-						magna nostrud aliqua dolor. Sunt aute est duis ut nulla officia
-						irure reprehenderit laborum fugiat dolore in elit. Adipisicing do
-						qui duis Lorem est.
-					</p>
+					<TimeLineHeading>Finance career</TimeLineHeading>
+					<TimeLineSubHeading>working the 9-5</TimeLineSubHeading>
+					<br />
+					<TimeLineBody>
+						Straight out of University, and I landed a pretty good graduate job.
+						Learned the ropes of what it takes to work in a big organisation.
+						Worked on some pretty big picture stuff with big accounts. Realised
+						it wasn't for me. I needed to get some real world experience.
+					</TimeLineBody>
 				</TimelineItem>
 				<TimelineItem
 					key="002"
